@@ -80,7 +80,7 @@ left_col, right_col = st.columns([4, 1])  # Image gets ~80%, icons get ~20%
 
 # Image on left
 with left_col:
-    st.image(r"C:\Users\sophi\OneDrive - Marquette University\Desktop - Copy\Spring 2025\AIM 4420\streamlit\monza.png", width=1400)
+    st.image(r"C:\Users\sophi\OneDrive - Marquette University\Desktop - Copy\Spring 2025\AIM 4420\streamlit app\F1_Steamlit_App\monza.png", width=1400)
 
 with right_col:
     st.markdown("<div style='font-size:36px; font-weight:bold;'>", unsafe_allow_html=True)
