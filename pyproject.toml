@@ -21,6 +21,9 @@ sentence-transformers = "^3.4.1"
 chromadb = "^0.6.3"
 sqlalchemy = "^2.0.39"
 fastf1 = "^3.5.3"
+openpyxl = "^3.1.5"
+plotly = "^6.0.1"
+streamlit = "^1.44.1"
  
  
 [build-system]

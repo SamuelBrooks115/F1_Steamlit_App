@@ -2,9 +2,12 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import sqlite3
+from theme_utils import apply_theme
+
 
 # --- Page Config ---
 st.set_page_config(page_title="Dashboard | F1 Monza", page_icon="🏎️", layout="wide")
+apply_theme()
 
 
 # --- Global CSS Font Injection ---

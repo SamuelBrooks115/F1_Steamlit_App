@@ -1,10 +1,11 @@
 import streamlit as st
+from theme_utils import apply_theme
+import pandas as pd
+import sqlite3
 
 # ✅ This must be the first Streamlit command
 st.set_page_config(page_title="Data Editor | F1 Monza", page_icon="🏎️", layout="wide")
-
-import pandas as pd
-import sqlite3
+apply_theme()
 
 # --- Database connection ---
 DB_PATH = "data/Structured_Data.db"
@@ -45,10 +46,12 @@ def delete_row(table, row_id_col, row_id_val):
 st.markdown("<h1 style='font-size: 40px;'>🛠️ Data Editor</h1>", unsafe_allow_html=True)
 st.markdown("<p style='font-size: 18px;'>View, insert, update, or delete data from the database.</p>", unsafe_allow_html=True)
 
+
+
 # --- Select Table ---
 st.markdown("<h2 style='font-size: 28px;'>Select a table to manage:</h2>", unsafe_allow_html=True)
 table_options = get_tables()
-selected_table = st.selectbox("", table_options)
+selected_table = st.selectbox("Choose a table", table_options)
 
 if selected_table:
     df = load_table(selected_table)

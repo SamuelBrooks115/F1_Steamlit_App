@@ -4,7 +4,7 @@ from profsandman_agents.vector_databases import ChromaDBVectorDB
 from profsandman_agents.agents import MultiAgent, ChromaAgent, SQLiteAgent, ExcelAgent
 
 # Load API key
-with open("data/API_KEY.txt", "r") as f:
+with open(r"C:\Users\samue\OneDrive\Desktop\AIM 4420\apikey.txt", "r") as f:
     api_key = f.read()
 
 llm = OpenAILLM(api_key=api_key)
@@ -29,7 +29,7 @@ except Exception as e:
     print(f"⚠️ Error checking ChromaDB documents: {e}")
 
 rag_agent = ChromaAgent(llm, vdb)
-rag_kwargs = {"k": 5, "max_distance": 0.75, "show_citations": True}
+rag_kwargs = {"k": 5, "max_distance": 0.65, "show_citations": True}
 
 sql_agent = SQLiteAgent(
     llm,
@@ -58,9 +58,9 @@ multi_agent = MultiAgent(
     agent_names=["Rag Agent", "SQL Agent", "Excel Agent"],
     agents=[rag_agent, sql_agent, xl_agent],
     agent_descriptions=[
-        "Answer questions using documents and interviews",
-        "Answer questions using SQL race data",
-        "Answer questions using structured Excel data"
+        "Act as an Expert in Formula 1 and answer questions using documents and interviews. Be specific in your responses.",
+        "Act as an Expert in Formula 1 and answer questions using SQL race data. Be specific in your responses.",
+        "Act as an Expert in Formula 1 and answer questions using structured Excel data. Be specific in your responses."
     ],
     agent_query_kwargs=[rag_kwargs, sql_kwargs, xl_kwargs]
 )

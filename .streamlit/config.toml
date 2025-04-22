@@ -1,7 +1,7 @@
 [theme]
-base="dark"  # or "light"
-primaryColor="#e63946"  # vibrant red for F1
-backgroundColor="#1d1d1d"
-secondaryBackgroundColor="#2c2c2c"
-textColor="#ffffff"
-font="sans serif"
+primaryColor = "#e10600"            # F1 Red
+backgroundColor = "#0f0f0f"         # Deep charcoal
+secondaryBackgroundColor = "#202020"  # Gray-black
+textColor = "#f0f0f0"               # Light text
+font = "sans serif"
+base = "dark"
